@@ -1,0 +1,218 @@
+:root {
+    --secondary-text: rgb(101, 103, 107);
+    --secondary-text-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    --hover-color: rgba(128, 128, 128, 0.15);
+}
+
+/* ------ Main styles ------ */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #F0F2F5;
+    margin: 0 0 180px;
+}
+ /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* ------ Additional classes ------ */
+.hidden {
+    display: none;
+}
+
+.round-picture {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-card {
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 12px -2px rgba(173,173,173,0.8);
+    max-width: 430px;
+}
+
+.no-posts {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+ /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* ------ Navbar styles ------ */
+/* Main grid */
+.nav-grid {
+    display:grid!important;
+    grid-template-columns: 100px 5fr 40px 30px 90px;
+    grid-auto-rows: minmax(56px, auto);
+}
+
+
+/* Network link */
+.nav-grid .network-link{
+    margin-top: 11px;
+    justify-self: end;
+    font-size: 1.3em;
+    font-weight: 1.3em;
+    color: white;
+    background: #2374e1;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-grid .network-link:hover {
+    background:#3380e7;
+    color: white;
+}
+
+/* Navbar */
+.nav-grid .navbar-toggler {
+    margin: 0px auto;
+}
+
+.nav-grid .navbar-collapse li {
+    text-align: center;
+}
+
+/* logout button */
+.logout{
+    cursor: pointer;
+    padding-top: 12px;
+}
+.logout svg{
+    width: 22px;
+}
+.logout:hover svg{
+    fill: red;
+}
+
+/* Theme button */
+.choose-theme {
+    padding-top: 13px;
+}
+.choose-theme svg{
+    width: 18px;
+}
+.choose-theme > div{
+    display: none;
+    cursor: pointer;
+    height: 25px;
+    align-items: center;
+}
+.choose-theme .active{
+    display: flex;
+}
+
+/* Language buttons */
+.choose-lang {
+    padding-top: 11px;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* ------ Language buttons styles ------ */
+.lang-button {
+    border: none;
+    background: transparent;
+}
+
+.lang-button:hover {
+    opacity: 0.6;
+}
+
+.grey-out {
+    opacity: 0.35;
+}
+ /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+ /* ------ Paginator styles ------ */
+.page-nav {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+}
+
+.page-nav .pagination {
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+
+.page-nav .current-page {
+    padding: 10px 0px;
+    text-align: center;
+    color: var(--secondary-text)
+}
+li.page-item.disabled {
+    opacity: 0.2;
+}
+ /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+@media(max-width:767px){
+    .nav-grid {
+        grid-template-columns: 10px 5fr 40px 30px 90px;
+    } 
+    .network-link{
+        margin-right: auto;
+        margin-left: 20px;
+    }
+}
+
+/* ------ THEME DARK ------ */
+.theme-dark{
+
+}
+body.theme-dark {
+    background-color: #18191a;
+    color: #E4E6EB;
+}
+
+
+.theme-dark .nav-grid,
+.theme-dark .page-nav{
+    background-color: #242526 !important;
+}
+
+.theme-dark .navbar-toggler svg{
+    fill: #E4E6EB !important;
+}
+
+.theme-dark .nav-link,
+.theme-dark .current-page{
+    color: #E4E6EB !important;
+}
+
+.theme-dark .info-card{
+    background-color: #242526 !important;
+    color: #E4E6EB !important;
+    box-shadow: none;
+}
+
+.theme-dark .page-link{
+    background-color: #18191a !important;
+    color: #E4E6EB !important;
+}
+.theme-dark .page-link:hover{
+    background-color: #242526 !important;
+}
+
+.theme-dark .modal-content{
+    background-color: #242526 !important;
+    color: #E4E6EB !important;
+}
+
+.theme-dark .logout svg{
+    fill: #E4E6EB ;
+}
+.theme-dark .logout:hover svg{
+    fill: red ;
+}
